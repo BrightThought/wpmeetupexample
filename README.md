@@ -1,4 +1,4 @@
-# wpmeetupexample
+# WP Meetup Example
 
 This repo is for demonstration purposes for the WP Meetup Pittsburgh presentation. As this repo is public it can be used as a template to begin a project. Below is a list of all of the packages that are used along with their associated websites.
 
