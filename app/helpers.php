@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Setup\CustomPermalink;
 use Roots\Sage\Container;
 
 /**
@@ -86,6 +87,9 @@ function filter_templates($templates)
         'resources/views'
     ]);
     $paths_pattern = "#^(" . implode('|', $paths) . ")/#";
+
+    //Injects custom permalink templates
+    $templates = CustomPermalink::permalinkTemplates( $templates );
 
     return collect($templates)
         ->map(function ($template) use ($paths_pattern) {

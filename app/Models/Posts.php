@@ -38,4 +38,22 @@ class Posts extends Model {
         $this->table = $wpdb->prefix . 'posts';
         parent::__construct( $attributes );
     }
+
+    /**
+     * Return the meta data of the post relationship
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function meta(){
+        return $this->hasMany(PostMeta::class, 'post_id',  'ID');
+    }
+
+    /**
+     * Return the post author
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function user(){
+        return $this->belongsTo(Users::class, 'post_author', 'ID');
+    }
 }

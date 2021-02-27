@@ -22,7 +22,7 @@ final class CreateTestTableCalledVenues extends AbstractMigration
     {
         global $wpdb;
 
-        $this->table($wpdb->prefix . 'venues', ['comment' => 'PSAV venues list'])
+        $this->table($wpdb->prefix . 'venues', ['comment' => 'WP Meetup Example'])
              ->addColumn('name', 'string')
              ->addColumn('address1', 'string', ['null' => true])
              ->addColumn('address2', 'string',['null' => true])
@@ -47,10 +47,10 @@ final class CreateTestTableCalledVenues extends AbstractMigration
              ->addColumn('contact_title', 'string', ['null' => true])
              ->addColumn('contact_phone', 'string', ['null' => true])
              ->addColumn('contact_email', 'string', ['null' => true])
-             ->addColumn('created_at', 'datetime', ['null' => true])
-             ->addColumn('updated_at', 'datetime', ['null' => true])
              ->addColumn('latitude', 'string')
              ->addColumn('longitude', 'string')
+             ->addColumn('created_at', 'datetime', ['null' => true])
+             ->addColumn('updated_at', 'datetime', ['null' => true])
              ->addIndex(['guid'], ['unique' => true])
              ->create();
     }

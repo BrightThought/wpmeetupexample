@@ -1,9 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-  @include('partials.page-header')
+  @if( ! $error404 )
 
-  @if (!have_posts())
+  {{ $location->name }}
+
+  @else
     @include('partials.404')
   @endif
 @endsection

@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Setup\CustomPermalink;
 use Illuminate\Database\Capsule\Manager as Capsule;
 use Roots\Sage\Container;
 use Roots\Sage\Assets\JsonManifest;
@@ -149,3 +150,7 @@ $capsule->addConnection([
 
 $capsule->setAsGlobal();
 $capsule->bootEloquent();
+
+
+//Setup Custom Permalinks
+CustomPermalink::init();
