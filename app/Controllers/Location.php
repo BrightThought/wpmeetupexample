@@ -5,6 +5,11 @@ namespace App\Controllers;
 use App\Models\Venues;
 use Sober\Controller\Controller;
 
+/**
+ * Class Location
+ *
+ * @package App\Controllers
+ */
 class Location extends Controller
 {
     /**
